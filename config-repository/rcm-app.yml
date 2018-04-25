@@ -2,7 +2,7 @@ spring:
   application:
     name: eureka-client
 server:
-  port: 8761
+  port: 9080
 
 eureka:
   instance:
