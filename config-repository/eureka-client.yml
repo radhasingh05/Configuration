@@ -10,10 +10,11 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:8090/eureka
+
 spring:
   boot:
     admin:
-      url: http://localhost:8080
+      url: http://localhost:9080
       auth:
         username: admin
         password: admin
@@ -24,8 +25,8 @@ spring:
 	prefer-ip: true
       metadata:
 	user:
-	  name: ${security.user.name}
-	  password: ${security.user.password}
+	  name: client
+	  password: client
 
 management:
   security:
@@ -38,9 +39,6 @@ management:
     health:
       show-details: ALWAYS
 
-security:
-  user:
-    name: client
-    password: client
+
 
 
