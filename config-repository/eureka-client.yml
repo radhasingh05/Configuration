@@ -10,6 +10,37 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:8090/eureka
+spring:
+  boot:
+    admin:
+      url: http://localhost:8080
+      auth:
+        username: admin
+        password: admin
+      client:
+      	enable: true
+	health-url: http://localhost:8761/health
+	management-base-url: http://localhost:8761
+	prefer-ip: true
+      metadata:
+	user:
+	  name: ${security.user.name}
+	  password: ${security.user.password}
 
+management:
+  security:
+    enable: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+security:
+  user:
+    name: client
+    password: client
 
 
