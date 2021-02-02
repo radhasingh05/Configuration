@@ -1,6 +1,19 @@
 server:
-  port: 8888
+  port: 8090    #default port where the service will be started
 
-# show full health details at /health
-endpoints.health.sensitive: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
 
+spring:
+  application:
+    name: eureka-client   #current service name to be used by the eureka server
+
+management:
+  security:
+    enabled: false  #disable the spring security on the management endpoints like /env, /refresh etc.
+
+logging:
+  level:
+    com.example.howtodoinjava: DEBUG
