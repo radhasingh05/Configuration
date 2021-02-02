@@ -17,3 +17,10 @@ management:
 logging:
   level:
     com.example.howtodoinjava: DEBUG
+
+name: prod-YAML
+environment: production
+enabled: true
+servers:
+    - www.abc.com
+    - www.xyz.com
